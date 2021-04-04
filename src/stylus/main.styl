@@ -1,5 +1,4 @@
 @import "base/index"
-
 .header
     display flex
     justify-content space-between
@@ -24,7 +23,7 @@
 
 .header-text
     h1
-        font-family 'Lexend Mega', sans-serif
+        font-family "Lexend Mega", sans-serif
         margin 0
         text-transform uppercase
         font-weight 700
@@ -55,10 +54,149 @@ form
             content "\f002"
             font-family FontAwesome
 
-form input, button
+form input,
+button
     border none
     outline none
     background transparent
+
+.main
+    display flex
+    flex-direction row
+    padding 60px 100px
+
+.main-text
+    display flex
+    align-content center
+    flex-direction column
+    align-items center
+    justify-content center
+    padding-right 100px
+    span
+        font-size 50px
+        text-transform uppercase
+        text-align center
+        font-weight 600
+    p
+        font-size 20px
+        text-align center
+        padding-top 30px
+        line-height 30px
+
+.main1
+    display flex
+    flex-direction row
+    padding 60px 100px
+
+.main1-text
+    display flex
+    align-content center
+    flex-direction column
+    align-items center
+    justify-content center
+    padding-left 100px
+    span
+        font-size 50px
+        text-transform uppercase
+        text-align center
+        font-weight 600
+    p
+        font-size 20px
+        text-align center
+        padding-top 30px
+        line-height 30px
+
+.main-photo
+    img
+        height 750px
+        width 550px
+
+.content
+    display flex
+    justify-content center
+    padding 50px 100px 100px
+
+.content-block
+    padding 0 25px
+    display flex
+    flex-direction column
+    justify-content center
+    align-items center
+    align-content center
+    img
+        width 90x
+        height 90px
+        margin-bottom 30px
+    span
+        line-height 25px
+        color gray
+        font-family "Poppins", sans-serif
+
+.footer
+    background-color #222222
+    color #fff
+    padding 70px 100px 20px 100px
+
+.footer-content
+    display flex
+    justify-content center
+    flex-direction row
+
+.footer-help,
+.footer-btns,
+.footer-email
+    width 25%
+    text-align center
+
+.footer-help
+    line-height 30px
+    span
+        text-transform uppercase
+        font-size 18px
+        font-weight 600
+    p
+        font-size 18px
+        font-weight 700
+
+.footer-btns
+    display flex
+    flex-direction column
+    button
+        color #fff
+        line-height 50px
+        font-size 24px
+        font-weight 600
+    a
+        cursor default
+
+.footer-email
+    line-height 30px
+    span
+        text-transform uppercase
+        font-size 18px
+        font-weight 600
+    input
+        margin-top 15px
+        padding 8px
+        border 1px solid #fff
+        background none
+        color #fff
+    button
+        color #fff
+        cursor pointer
+
+.footer-links
+    padding-top 25px
+    text-align center
+    a
+        padding 0 15px
+        font-size 20px
+        color #fff
+
+.footer-copy
+    padding-top 50px
+    text-align center
+    color #fff
 
 .m-menu-link
     display none
@@ -99,103 +237,3 @@ form input, button
 
 .m-contacts-link
     display none
-
-.arrow
-    margin 30px 0
-    display flex
-    justify-content center
-    flex-direction row
-    align-items center
-    p
-        padding-left 15px
-    a
-        text-decoration none
-        color #000
-        padding-right 15px
-    i
-        color grey
-
-.content
-    padding 50px 200px 100px 200px
-    display flex
-    justify-content space-around
-    flex-direction row
-
-.clothes
-    display flex
-    flex-direction column
-    justify-content center
-    text-align center
-    width 300px
-    height 350px
-    img
-        width 300px
-        height 350px
-    span
-        padding 10px 0
-        font-weight 600
-    p
-        margin 0
-        padding-bottom 10px
-
-.footer
-    background-color #222222
-    color #fff
-    padding 70px 100px 20px 100px
-
-.footer-content
-    display flex
-    justify-content center
-    flex-direction row
-
-.footer-help, .footer-btns, .footer-email
-    width 25%
-    text-align center
-
-.footer-help
-    line-height 30px
-    span
-        text-transform uppercase
-        font-size 18px
-        font-weight 600
-    p
-        font-size 18px
-        font-weight 700
-
-.footer-btns
-    display flex
-    flex-direction column
-    button
-        color #fff
-        line-height 50px
-        font-size 24px
-        font-weight 600
-
-.footer-email
-    line-height 30px
-    span
-        text-transform uppercase
-        font-size 18px
-        font-weight 600
-    input
-        margin-top 15px
-        padding 8px
-        border 1px solid #fff
-        background none
-        color #fff
-    button
-        color #fff
-        cursor pointer
-
-.footer-links
-    padding-top 25px
-    text-align center
-    a
-        padding 0 15px
-        font-size 20px
-        color #fff
-
-.footer-copy
-    padding-top 50px
-    text-align center
-    color #fff

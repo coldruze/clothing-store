@@ -1,3 +1,5 @@
+@import "base/index"
+    
 .page-login
     display flex
     align-items center
@@ -13,3 +15,67 @@
 
 .page-login--with-background
     background #000
+.button--primary
+    border none
+    padding 10px 0
+    background-color lightblue
+    &:hover
+        cursor pointer
+.checkbox
+    align-items center
+    display flex
+
+.checkbox__field
+    appearance none
+    background #fff center center no-repeat
+    background-size 80%
+    border 1px solid #ccc
+    flex-grow 0
+    flex-shrink 0
+    height 16px
+    margin-right 10px
+    overflow hidden
+    outline none
+    width 16px
+    &:checked
+        background-image url(../images/icons/check.svg)
+.form__title
+    text-align center
+    font-size 22px
+    font-weight bold
+    line-height 1px
+    margin 0 0 10px
+    padding 10px 0
+
+.form__control
+    margin-top 20px
+    &:first-child
+        margin-top 0
+.input
+    display flex
+    align-items center
+    padding 7px 14px
+    border 1px solid #ccc
+    color #ccc
+
+.input__icon
+    flex-grow 0
+    flex-shrink 0
+    height 16px
+    margin-right 10px
+    overflow hidden
+    width 16px
+
+.input__icon img,
+svg
+    height auto
+    max-height 100%
+    max-width 100%
+    width auto
+
+.input__field
+    appearance none
+    border none
+    outline none
+    font-size 14px
+

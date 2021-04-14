@@ -113,7 +113,7 @@ button
 .main__content
     display flex
     justify-content center
-    padding 50px 100px 100px
+    padding 50px 100px 0
 
 .main__content-block
     padding 0 10px
@@ -131,108 +131,25 @@ button
         color gray
         font-family "Poppins", sans-serif
 
-.footer
-    background-color #222222
-    color #fff
-    padding 70px 100px 20px 100px
+.main__break-line
+    content ""
+    display block
+    width 30%
+    height 1.5px
+    margin 50px auto
+    background-color #000
 
-.footer-content
+.main__news
     display flex
     justify-content center
-    flex-direction row
-
-.footer-help,
-.footer-btns,
-.footer-email
-    width 25%
-    text-align center
-
-.footer-help
-    line-height 30px
+    &:before
+        content ""
+        
     span
-        text-transform uppercase
-        font-size 18px
-        font-weight 600
-    p
-        font-size 18px
-        font-weight 700
-
-.footer-btns
-    display flex
-    flex-direction column
-    button
-        color #fff
-        line-height 50px
-        font-size 24px
-        font-weight 600
+        font-size 16px
+        font-style italic
     a
-        cursor default
-
-.footer-email
-    line-height 30px
-    span
-        text-transform uppercase
-        font-size 18px
-        font-weight 600
-    input
-        margin-top 15px
-        padding 8px
-        border 1px solid #fff
-        background none
-        color #fff
-    button
-        color #fff
-        cursor pointer
-
-.footer-links
-    padding-top 25px
-    text-align center
-    a
-        padding 0 15px
-        font-size 20px
-        color #fff
-
-.footer-copy
-    padding-top 50px
-    text-align center
-    color #fff
-
-.m-menu-link
-    display none
-    color #000
-    font-size 2rem
-
-.m-menu
-    position fixed
-    left 0
-    top 0
-    height 800px
-    width 100%
-    text-align center
-    list-style none
-    font-size 2rem
-    line-height 5rem
-    margin 0
-    padding 0
-    background #fff
-    display flex
-    flex-direction column
-    align-items center
-    justify-content center
-    transform translateX(100%)
-    transition 0.5s
-
-.m-menu__active
-    transform translateX(0%)
-
-.close-menu
-    position fixed
-    right 2rem
-    top 0
-    font-size 5rem
-    font-weight 900
-    &:hover
-        cursor pointer
-
-.m-contacts-link
-    display none
+        text-decoration none
+        color gray
+        &:hover
+            color red

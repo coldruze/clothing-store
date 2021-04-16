@@ -138,11 +138,11 @@ const paths = () => {
 	return gulp
 		.src(BUILD_DIR + "/*.html")
 		.pipe(replace(/"stylus\/([^\.]+)\.styl/, '"./assets/css/$1.css'))
-		// .pipe(replace('href="../build', 'href=".'))
+		.pipe(replace('href="../build', 'href=".'))
 		.pipe(
 			replace(/(<script src=")(script)\/(index.js">)/, "$1./assets/js/$3")
 		)
-		// .pipe(replace('src="../build', 'src=".'))
+		.pipe(replace('src="../build', 'src=".'))
 		// .pipe(replace("upload/", "./assets/images/upload/"))
 		.pipe(replace('"images/', '"./assets/images/'))
 		.pipe(gulp.dest(BUILD_DIR));

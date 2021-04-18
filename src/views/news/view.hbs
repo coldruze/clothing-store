@@ -1,0 +1,12 @@
+<a href="/news">&larr; Назад</a>
+
+<hr>
+Дата: {{model.date}}
+<hr>
+<pre>
+    {{model.text}}
+</pre>
+<hr>
+<a href="/news/update/{{model._id}}" class="waves-effect waves-light btn">Изменить</a>
+<a href="/news/delete/{{model._id}}" class="waves-effect waves-light btn"
+  onclick="return confirm('Do you real delete this record?');">Удалить</a>

@@ -1,0 +1,159 @@
+.styles__header 
+  height 100vh
+  background linear-gradient(to left bottom,#000,#fff)
+  display flex
+  align-items center
+  justify-content center
+
+.styles-header__text
+  width 70vw
+  opacity 0
+  animation show 2s 1 
+  animation-fill-mode forwards 
+  animation-delay 0.5s 
+
+@keyframes show
+  0%  
+    opacity 0
+  100%
+    opacity 1
+  
+.styles-header__text 
+  span
+    font-size 150px
+    font-family 'Playfair Display', serif
+
+.styles__main
+  margin 50px 0
+  display flex
+  flex-direction row
+  span
+    margin 0 200px
+    display flex
+    align-items center
+    line-height 28px
+    font-family 'Open Sans',sans-serif
+    font-weight 600
+  img
+    height auto
+    width 500px
+    margin-right 100px
+  
+.styles__collage
+  img
+    width 33%
+    height 500px
+
+.styles__rules
+  margin 50px 150px
+  display flex
+  flex-direction row
+  
+.styles-rules__content
+  display flex
+  flex-direction column
+  justify-content center
+
+.styles-rules__block
+  display flex
+  flex-direction row
+  margin-bottom 70px
+  h2 
+    margin 0 50px 
+    font-family 'Playfair Display', serif
+    font-size 60px
+    font-weight 100
+    display flex
+    align-items center
+  span
+    font-weight 600
+    line-height 36px
+
+.styles__content
+  display flex
+  flex-direction column
+  justify-content center
+  align-items center
+
+.styles-content__image
+  img
+    width 570px
+
+.styles-content__text
+  position absolute
+  display flex
+  justify-content center
+  span
+    font-family 'Playfair Display', serif
+    font-size 500px
+    font-style italic
+
+.styles__preferences
+  display flex
+  flex-direction column
+  justify-content center
+  align-items center
+  margin 0 300px 50px
+  h2 
+    font-family 'Playfair Display', serif
+    font-size 70px
+    font-weight 400
+    margin 50px 0 50px
+  span
+    font-family 'Open Sans',sans-serif
+    font-weight 700
+    text-align center
+    line-height 26px
+
+.styles__individ
+  height 50vh
+  background #000
+  display flex
+  justify-content center
+  align-items center
+
+.styles-individ__text
+  color #fff
+  width 70vw
+  h2 
+    font-family 'Playfair Display', serif
+    font-size 34px
+    font-weight 400
+    margin 0 0 50px
+  span
+    font-weight 100
+    text-align center
+    line-height 30px
+    
+.styles__connect
+  display flex
+  justify-content center
+  margin-bottom 50px
+
+.styles-connect__content
+  display flex
+  flex-direction column
+  width 70vw
+  h2 
+    font-family 'Playfair Display', serif
+    font-size 50px
+    font-weight 400
+  span
+    font-family 'Open Sans',sans-serif
+    line-height 26px
+    width 50%
+    font-weight 400
+    margin-bottom 30px
+  input 
+    margin-bottom 10px
+    padding 14px 10px
+    border none
+    // &:last-child
+    //   margin-bottom 30px
+  button
+    background-color #000
+    color #fff
+    width 150px
+    height 45px
+    font-family 'Open Sans',sans-serif
+    margin-top 30px

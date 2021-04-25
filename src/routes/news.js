@@ -31,6 +31,14 @@ module.exports = (app, db) => {
         
     });
 
+	app.get("/news/create", (request, response) => {
+        response.render("./news/form.hbs", {
+            title: "Добавить новость",
+            model: getBaseObject(),
+            url: "/news/create"
+        });
+    });
+
     app.get("/news/:id", (request, response) => {
         db.collection("news").findOne({
             "_id": new ObjectID(request.params.id)
@@ -45,14 +53,6 @@ module.exports = (app, db) => {
             });
         })
         
-    });
-
-    app.get("/news/create", (request, response) => {
-        response.render("./news/form.hbs", {
-            title: "Добавить новость",
-            model: getBaseObject(),
-            url: "/news/create"
-        });
     });
 
     app.post("/news/create", (request, response) => {

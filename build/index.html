@@ -4,119 +4,88 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
   <link rel="stylesheet" href="./assets/css/index.css"/>
 	<link rel="icon" href="./assets/images/favicon.png" type="image/x-icon">
-	<title>Стиль</title>
+	<title>Личный кабинет</title>
 </head>
 
-<body>
+<body class="cabinet__back">
 
-  <div class="styles__header">
-    <div class="styles-header__text ">
-      <span>Only style</span>
+  <div class="arrow">
+    <a href="main.html">Главная</a>
+    <i class="fa fa-angle-right" aria-hidden="true"></i>
+    <p>Личный кабинет</p>
+  </div>
+
+  <div class="cabinet__caption">
+    <h2>Личный кабинет</h2>
+  </div>
+
+  <div class="cabinet__content">
+
+    <div class="cabinet__sidebar">
+      <button class="cabinet__profile">Мой профиль</button>
+      <button class="cabinet__orders">Данные оплаты</button>
     </div>
-  </div>
 
-  <div class="styles__main">
-    <span>Ориентируясь только на внешность, можно подобрать немало вариантов очень удачного стиля. Тип лица и пропорции фигуры, рост и вес зачастую определяют, какой из стилей подойдет идеально. Есть тип женщин, которым лучше всего подходят футболки, мужские рубашки, объемные свитеры и вытертые джинсы и совсем не идет нарядная одежда. В деловой одежде они тоже зачастую выглядят комично. Поэтому даже в самой формальной одежде им всегда нужен элемент небрежности.</span>
-    <img src="./assets/images/styles/styles1.jpeg" alt="">
-  </div>
-
-  <div class="styles__collage">
-    <a data-fslightbox="styles__collage" href="./upload/styles2.PNG"><img src="./assets/images/styles/styles2.PNG" alt=""></a>
-    <a data-fslightbox="styles__collage" href="./upload/styles3.PNG"><img src="./assets/images/styles/styles3.PNG" alt=""></a>
-    <a data-fslightbox="styles__collage" href="./upload/styles4.PNG"><img src="./assets/images/styles/styles4.PNG" alt=""></a>
-  </div>
-
-  <div class="styles__rules">
-    <img src="./assets/images/styles/styles5.PNG" alt="">
-    <div class="styles-rules__content">
-      <div class="styles-rules__block">
-          <h2>A</h2>
-          <span>Выбирайте цвета, которые вас украшают, добавляют свежести, делают ваши глаза более выразительными, не требуют нанесения макияжа, омолаживают вас.</span>
-      </div>
-      <div class="styles-rules__block">
-          <h2>B</h2>
-          <span>Если вы любите принты и рисунки, выбирайте те, которые вас украшают. Не забывайте про линии в вашем лице – принты и рисунки должны быть родственными, а не противоположными.</span>
-      </div>
-      <div class="styles-rules__block">
-          <h2>C</h2>
-          <span>К сожалению, многие не умеют выбирать и грамотно сочетать аксессуары или просто недооценивают их роль. А ведь именно с помощью аксессуаров можно передать настроение или завершить образ. Без них нельзя.</span>
+    <div class="cabinet__profile-info cabinet__profile-info--active">
+      <div class="cabinet__profile-blocks">
+        <h3>Личные данные</h3>
+        <div class="profile__wideblock">
+          <p>имя и фамилия</p>
+          <input type="text">
         </div>
+        <div class="profile__contacts">
+          <div class="profile__block">
+            <p>контактный телефон</p>
+            <input type="text">
+          </div>
+          <div class="profile__block">
+            <p>электронная почта</p>
+            <input type="text">
+          </div>
+        </div>
+        <div class="profile__wideblock">
+          <p>Адрес проживания</p>
+          <input type="text">
+        </div>
+        <button class="cabinet__save">Сохранить изменения</button>
+      </div>
     </div>
-  </div>
 
-  <div class="styles__content">
-    <div class="styles-content__image">
-      <img src="./assets/images/styles/styles6.jpeg" alt="">
+    <div class="cabinet__orders-info cabinet__orders-info--active">
+      <div class="cabinet__orders-blocks">
+        <h3>Данные и способы оплаты</h3>
+        <div class="orders__getting">
+          <div class="orders__block">
+            <p>предпочтительный способ получения</p>
+            <select name="select" class="orders__select">
+              <option value="select1" class="select__style">Доставкой на почту</option>
+              <option value="select2">Курьером</option>
+            </select>
+          </div>
+          <div class="orders__block">
+            <p>предпочтительный способ оплаты</p>
+            <select name="select" class="orders__select">
+              <option value="select1" class="select__style">Картой</option>
+              <option value="select2">Наличными</option>
+            </select>
+          </div>
+        </div>
+        <div class="orders__wideblock">
+          <p>адрес доставки</p>
+          <input type="text">
+        </div>
+        <button class="cabinet__save">Сохранить изменения</button>
+      </div>
     </div>
-    <div class="styles-content__text">
-      <span>style</span>
-    </div>
-  </div>
 
-  <div class="styles__preferences">
-    <h2>О предпочтениях</h2>
-    <span>Как никто другой вы знаете свои предпочтения в одежде. Выбор основывается на образе и ритме жизни. Любите ли вы юбки, платья или вы предпочитаете брюки или джинсы. И исходя из этого, можно строить ваш гардероб. На основе базы, дополняя ее нужными аксессуарами, можно получать совершенно разные образы.</span>
   </div>
-
-  <div class="styles__individ">
-    <div class="styles-individ__text">
-      <h2>Индивидуальная стилистика</h2>
-      <span>Каждый из нас очень индивидуален. Но все же есть определенная классификация, которая поможет человеку понять свою природную красоту и создать свой неповторимый образ. Речь идет об индивидуальной стилистике. Существуют: Классический стиль, Драматический стиль, Натуральный стиль, Сложно-романтический и Наивно-романтический стили. Именно стиль влияет на выбор фасонов, цвета и цветовых сочетаний, тканей и фактур, а также аксессуаров.
-      </span>
-    </div>
-  </div>
-
-  <div class="styles__connect">
-    <div class="styles-connect__content">
-      <h2>Связаться для консультации</h2>
-      <span>Стиль – это прежде всего уверенность, ваш уникальный почерк.  А мнение окружающих – это только их мнение. Стиль с вами навсегда. А тренды приходят и уходят.</span>
-      <input type="text" placeholder="Enter your phone">
-      <input type="text" placeholder="Enter a valid email address">
-      <input type="text" placeholder="Enter your name">
-      <input type="text" placeholder="Enter your message">
-      <button class="styles-connect__button" onclick="call()">Отправить</button>
-    </div>
-  </div>
-
-  <div class="footer">
-		<div class="footer-content">
-			<div class="footer-help">
-				<span>Нужна помощь?<br>Позвоните нам в будние дни</span>
-				<p>8 (777) 777-77-77</p>
-			</div>
-			<div class="footer-btns">
-				<a href="clothes1.html"><button class="man">Мужское</button></a>
-				<a href="clothes2.html"><button class="woman">Женское</button></a>
-				<a href="clothes3.html"><button class="child">Детское</button></a>
-			</div>
-			<div class="footer-email">
-				<span>Получайте первыми информацию о новинках в нашем интернет-магазине</span>
-				<br>
-				<input type="text" placeholder="Введите email">
-				<button type="submit" onclick="info()">Отправить</button>
-			</div>
-		</div>
-		<div class="footer-links">
-			<a href=""><i class="fa fa-twitter" aria-hidden="true"></i></a>
-			<a href=""><i class="fa fa-instagram" aria-hidden="true"></i></a>
-			<a href=""><i class="fa fa-facebook" aria-hidden="true"></i></a>
-			<a href=""><i class="fa fa-vk" aria-hidden="true"></i></a>
-			<a href=""><i class="fa fa-telegram" aria-hidden="true"></i></a>
-		</div>
-		<div class="footer-copy">
-			<span>&copy; 2021</span>
-		</div>
-	</div>
 
 	<script src="./assets/js/index.js"></script>
 	<script src="./assets/js/jquery.min.js"></script>
-	<script src="./assets/js/m-menu.js"></script>
 	<script src="./assets/js/fslightbox.js"></script>
-  <script src="./assets/js/styles.js"></script>
-  <script src="./assets/js/footer-button.js"></script>
+  <script src="./assets/js/cabinet.js"></script>
 	
 </body>
 

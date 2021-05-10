@@ -22,3 +22,7 @@ cabinet__orders.addEventListener("click", function(){
 		show_orders.style.display = 'none'
 	}
 });
+
+function cabinet_save(){
+	alert('Данные успешно сохранены');
+}

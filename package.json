@@ -27,9 +27,14 @@
   },
   "dependencies": {
     "body-parser": "^1.19.0",
+    "connect-mssql": "^1.5.0",
+    "cookie-parser": "^1.4.5",
     "express": "^4.17.1",
     "express-handlebars": "^5.3.0",
+    "express-session": "^1.17.1",
     "fslightbox": "^3.2.3",
-    "mongodb": "^3.6.6"
+    "mongodb": "^3.6.6",
+    "mssql": "^7.0.0",
+    "xml": "^1.0.1"
   }
 }

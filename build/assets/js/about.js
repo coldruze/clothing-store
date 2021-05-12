@@ -98,3 +98,7 @@ show_teammate3.addEventListener("click", function(){
 		info_teammate3.style.display = 'none'
 	}
 });
+
+function contact_send(){
+	alert("Thanks!");
+}

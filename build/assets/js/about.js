@@ -9,7 +9,8 @@ var btn3=document.querySelector('#about__serv-btn3');
 var btn4=document.querySelector('#about__serv-btn4');
 var btn5=document.querySelector('#about__serv-btn5');
 
-btn1.addEventListener("click", function(){
+btn1.addEventListener("click", function(e){
+	e.preventDefault();
 	if(text1.style.display == 'none'){
 		text1.style.display = 'flex'
 	}
@@ -57,21 +58,25 @@ btn5.addEventListener("click", function(){
 
 
 var info_teammate1=document.querySelector('.about__teammate1');
-var show_teammate1=document.querySelector('#teammate__btn1');
+var show_teammate1=document.querySelector('.teammate__btn1');
 var info_teammate2=document.querySelector('.about__teammate2');
-var show_teammate2=document.querySelector('#teammate__btn2');
+var show_teammate2=document.querySelector('.teammate__btn2');
 var info_teammate3=document.querySelector('.about__teammate3');
-var show_teammate3=document.querySelector('#teammate__btn3');
+var show_teammate3=document.querySelector('.teammate__btn3');
 
-show_teammate1.addEventListener("click", function(){
+show_teammate1.addEventListener("click", function(e){
+	e.preventDefault();
 	if(info_teammate1.style.display == 'none'){
 		info_teammate1.style.display = 'block'
-		show_teammate1.style.opacity == "1"
 		info_teammate2.style.display = 'none'
 		info_teammate3.style.display = 'none'
+		show_teammate1.classList.remove("teammate__btn1")
+		show_teammate1.classList.add("teammate__btn1--active")
 	}
     else {
 		info_teammate1.style.display = 'none'
+		show_teammate1.classList.remove("teammate__btn1--active")
+		show_teammate1.classList.add("teammate__btn1")
 	}
 });
 
@@ -79,11 +84,14 @@ show_teammate2.addEventListener("click", function(){
 	if(info_teammate2.style.display == 'none'){
 		info_teammate1.style.display = 'none'
 		info_teammate2.style.display = 'block'
-		show_teammate2.style.opacity == "1"
 		info_teammate3.style.display = 'none'
+		show_teammate2.classList.remove("teammate__btn2")
+		show_teammate2.classList.add("teammate__btn2--active")
 	}
     else {
 		info_teammate2.style.display = 'none'
+		show_teammate2.classList.remove("teammate__btn2--active")
+		show_teammate2.classList.add("teammate__btn2")
 	}
 });
 
@@ -92,10 +100,13 @@ show_teammate3.addEventListener("click", function(){
 		info_teammate1.style.display = 'none'
 		info_teammate2.style.display = 'none'
 		info_teammate3.style.display = 'block'
-		show_teammate3.style.opacity == "1"
+		show_teammate3.classList.remove("teammate__btn3")
+		show_teammate3.classList.add("teammate__btn3--active")
 	}
     else {
 		info_teammate3.style.display = 'none'
+		show_teammate3.classList.remove("teammate__btn3--active")
+		show_teammate3.classList.add("teammate__btn3")
 	}
 });
 
@@ -106,7 +117,8 @@ function contact_send(){
 var menu_btn=document.querySelector('.about__mobile-btn');
 var menu_nav=document.querySelector('.about__mobile-nav');
 
-menu_btn.addEventListener("click", function(){
+menu_btn.addEventListener("click", function(e){
+	e.preventDefault();
 	if (menu_nav.style.display == 'none'){
 		menu_nav.style.display = 'flex'
 	}

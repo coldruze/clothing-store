@@ -1,3 +1,8 @@
+.about__mobile-menu
+  display none
+  text-align center
+  z-index 1
+  
 .about__mobile-btn
   color #fff
   font-size 20px
@@ -17,6 +22,8 @@
 @media(max-width:1200px)
   .about__nav
     display none
+  .about__mobile-menu
+    display block
   .about__mobile-btn
     display block
 
@@ -179,6 +186,14 @@
     textarea
       margin-right 0
 @media(max-width:500px)
+  .about__top
+    flex-direction column
+    align-items center
+  .about__logo
+    margin-bottom 15px
+    text-align center
+  .about__mobile-menu
+    margin-bottom 15px
   .about__menu-vid
     display none
   .about__contact-send

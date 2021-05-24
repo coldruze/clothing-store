@@ -4,12 +4,26 @@
 .about__header
   background linear-gradient(to right, #16ebbe, #04b4cb)
   padding 50px 70px 190px 70px
+  position relative
+  &:before
+    background  url(../../images/about/back1.jpg) right center no-repeat
+    background-size cover
+    content ""
+    display block
+    height 100%
+    left 0
+    opacity .1
+    position absolute
+    top 0
+    width 100%
+    z-index 0
 
 .about__top
   display flex
   flex-direction row
   flex-wrap nowrap
   justify-content space-between
+  z-index 1
 
 .about__logo
   display flex
@@ -36,6 +50,7 @@
 .about__login
   display flex
   justify-content right
+  align-items flex-start
 
 #about__login-btn
   padding 8px 20px
@@ -226,10 +241,6 @@
       font-family FontAwesome
       color #777
       float right
-
-// #about__serv-btn--active
-//   &:after
-//     content '\2212'
       
 .about__serv__block-text1, .about__serv__block-text2, .about__serv__block-text3, .about__serv__block-text4, .about__serv__block-text5
   display none
@@ -252,6 +263,19 @@
   align-content center
   align-items center
   justify-content space-between
+  position relative
+  &:before
+    background  url(../../images/about/back.jpg) right center no-repeat
+    background-size cover
+    content ""
+    display block
+    height 100%
+    left 0
+    opacity .1
+    position absolute
+    top 0
+    width 100%
+    z-index 0
 
 .about__fb-text
   display flex
@@ -259,6 +283,7 @@
   align-items flex-start
   height 100%
   margin-right 100px
+  z-index 1
   h2
     font-size 45px
     margin 0 0 20px 0
@@ -284,6 +309,7 @@
   display flex
   flex-direction column
   justify-content space-between
+  z-index 1
 
 .about__connect-block
   display flex
@@ -337,8 +363,11 @@
       height 100px
       width 100px
 
-#teammate__btn1, #teammate__btn2, #teammate__btn3
+.teammate__btn1, .teammate__btn2, .teammate__btn3
   opacity 0.5
+
+.teammate__btn1--active, .teammate__btn2--active, .teammate__btn3--active
+  opacity 1
 
 .about__teammate1, .about__teammate2, .about__teammate3
   display none

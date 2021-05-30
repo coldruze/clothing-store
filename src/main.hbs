@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="stylus/index.styl"/>
+  <link rel="stylesheet" href="/assets/css/index.css"/>
 	<link rel="icon" href="images/favicon.png" type="image/x-icon">
 	<title>Главная</title>
 </head>
@@ -13,9 +13,9 @@
 
 	<ul class="m-menu">
     <li class="close-menu">&times;</li>
-    <li><a href="clothes1.html"><button class="man">Мужское</button></a></li>
-    <li><a href="clothes2.html"><button class="woman">Женское</button></a></li>
-    <li><a href="clothes3.html"><button class="child">Детское</button></a></li>
+    <li><a href="/clothes1"><button class="man">Мужское</button></a></li>
+    <li><a href="/clothes2"><button class="woman">Женское</button></a></li>
+    <li><a href="/clothes3"><button class="child">Детское</button></a></li>
   </ul>
 
   <div class="header">
@@ -24,16 +24,16 @@
         <i class="fa fa-bars"></i>
       </a>
       <div class="header-btns visible-lg">
-        <a href="clothes1.html"><button class="man">Мужское</button></a>
-        <a href="clothes2.html"><button class="woman">Женское</button></a>
-        <a href="clothes3.html"><button class="child">Детское</button></a>
+        <a href="/clothes1"><button class="man">Мужское</button></a>
+        <a href="/clothes2"><button class="woman">Женское</button></a>
+        <a href="/clothes3"><button class="child">Детское</button></a>
       </div>
       <div class="header-text">
         <h1>tartarch</h1>
       </div>
     </div>
     <div class="header-login">
-      <a href="login.html"><i class="fa fa-user" aria-hidden="true"></i></a>
+      	<a href="/auth"><i class="fa fa-user" aria-hidden="true"></i></a>
     </div>
   </div>
 
@@ -49,13 +49,13 @@
 				не обойтись этой весной. Оцените самые стильные и практичные новинки из весенних коллекций.</p>
 		</div>
 		<div class="main-photo">
-			<a data-fslightbox="main-photos" href="../build/upload/main1.PNG"><img src="images/main/main1.PNG" alt=""></a>
+			<a data-fslightbox="main-photos" href="./assets/images/main/main1.PNG"><img src="images/main/main1.PNG" alt=""></a>
 		</div>
 	</div>
 
 	<div class="main1">
 		<div class="main-photo">
-			<a data-fslightbox="main-photos" href="../build/upload/main2.PNG"><img src="images/main/main2.PNG" alt=""></a>
+			<a data-fslightbox="main-photos" href="./assets/images/main/main2.PNG"><img src="images/main/main2.PNG" alt=""></a>
 		</div>
 		<div class="main1-text">
 			<span>нескучная рубашка</span>
@@ -73,7 +73,7 @@
 				помогает быстрому засыпанию и славному просыпанию утром.</p>
 		</div>
 		<div class="main-photo">
-			<a data-fslightbox="main-photos" href="../build/upload/main3.jpg"><img src="images/main/main3.jpg" alt=""></a>
+			<a data-fslightbox="main-photos" href="./assets/images/main/main3.jpg"><img src="images/main/main3.jpg" alt=""></a>
 		</div>
 	</div>
 
@@ -95,7 +95,7 @@
 	<div class="main__break-line"></div>
 
 	<div class="main__news">
-		<span>Узнайте больше о стиле <a href="style.html">здесь...</a></span>
+		<span>Узнайте больше о стиле <a href="/style">здесь...</a></span>
 	</div>
 
 	<div class="main__break-line"></div>
@@ -107,17 +107,19 @@
 				<p>8 (777) 777-77-77</p>
 			</div>
 			<div class="footer-btns">
-				<a href="clothes1.html">Мужское</a>
-				<a href="clothes2.html">Женское</a>
-				<a href="clothes3.html">Детское</a>
-				<a href="style.html">Стиль</a>
-				<a href="about.html">О нас</a>
+				<a href="/clothes1">Мужское</a>
+				<a href="/clothes2">Женское</a>
+				<a href="/clothes3">Детское</a>
+				<a href="/style">Стиль</a>
+				<a href="/about">О нас</a>
 			</div>
 			<div class="footer-email">
 				<span>Получайте первыми информацию о новинках в нашем интернет-магазине</span>
 				<br>
-				<input type="text" placeholder="Введите email">
-				<button type="submit" onclick="info()">Отправить</button>
+        <form action="">
+				  <input type="text" placeholder="Введите email" required>
+				  <button type="submit">Отправить</button>
+        </form>
 			</div>
 		</div>
 		<div class="footer-links">

@@ -110,9 +110,9 @@ show_teammate3.addEventListener("click", function(){
 	}
 });
 
-function contact_send(){
-	alert("Thanks!");
-}
+// function contact_send(){
+// 	alert("Thanks!");
+// }
 
 var menu_btn=document.querySelector('.about__mobile-btn');
 var menu_nav=document.querySelector('.about__mobile-nav');

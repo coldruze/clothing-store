@@ -4,62 +4,31 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="stylus/index.styl">
+  <link rel="stylesheet" href="/assets/css/index.css"/>
   <link rel="icon" href="images/favicon.png" type="image/x-icon">
   <title>Авторизация</title>
 </head>
 
-<!-- <script>
-  window.onload=function(){
-    var btn = document.getElementById('login__btn');
-    var inputs = document.getElementsByTagName('input');
-
-    btn.addEventListener('click', function(){
-      var xhr = new XMLHttpRequest();
-
-      xhr.open('POST', '/login');
-
-      var userData = {
-        username: inputs[0].value,
-        password: inputs[1].value 
-      };
-
-      xhr.setRequestHeader('Content-Type', 'application/json');
-
-      xhr.send(JSON.stringify(userData));
-
-      xhr.onload = function(){
-        alert(this.responseText);
-      };
-
-      xhr.onerror = function(){
-        alert('Server error!');
-      }
-
-    })
-  }
-</script> -->
-
 <body class="page-login page-login--with-background">
 
-  <form action="#" class="form page-login__form">
+  <form action="/auth" method="post" class="form page-login__form">
     <h1 class="form__title page-login__title">Авторизация</h1>
     <div class="input-login form__control">
       <span class="input__icon">
         <img src="images/icons/user.svg" alt="">
       </span>
-      <input type="email" class="input__field input__field--text" placeholder="Email">
+      <input type="text" class="input__field input__field--text" placeholder="Email" name="userName">
     </div>
     <div class="input-login form__control">
       <span class="input__icon">
         <img src="images/icons/key.svg" alt="">
       </span>
-      <input type="password" class="input__field input__field--text" placeholder="Пароль">
+      <input type="password" class="input__field input__field--text" placeholder="Пароль" name="userPassword"> 
     </div>
-    <label for="login-remember" class="checkbox-login form__control">
+    {{!-- <label for="login-remember" class="checkbox-login form__control">
       <input id="login-remember" type="checkbox" class="checkbox__field">
       Запомнить меня
-    </label>
+    </label> --}}
     <div class="form__control">
       <button type="submit" class="button--primary page-login__enter" id="login__btn">
         Войти

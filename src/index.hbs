@@ -18,6 +18,26 @@
             <label for="password">Пароль:</label>
             <input class="form-control" name="password" />
         </div>
+        <div class="form-group">
+            <label for="email">Почта:</label>
+            <input class="form-control" name="email" />
+        </div>
+        <div class="form-group">
+            <label for="address">Адрес проживания:</label>
+            <input class="form-control" name="address" />
+        </div>
+        <div class="form-group">
+            <label for="getting">Способ получения:</label>
+            <input class="form-control" name="getting" />
+        </div>
+        <div class="form-group">
+            <label for="payment">Способ оплаты:</label>
+            <input class="form-control" name="payment" />
+        </div>
+        <div class="form-group">
+            <label for="deliver">Адрес доставки:</label>
+            <input class="form-control" name="deliver" />
+        </div>
         <div class="panel-body">
             <button type="submit" class="btn btn-sm btn-primary">Сохранить</button>
             <a id="reset" class="btn btn-sm btn-primary">Сбросить</a>
@@ -60,17 +80,27 @@
                 form.elements["id"].value = user._id;
                 form.elements["name"].value = user.name;
                 form.elements["password"].value = user.password;
+                form.elements["email"].value = user.email;
+                form.elements["address"].value = user.address;
+                form.elements["getting"].value = user.getting;
+                form.elements["payment"].value = user.payment;
+                form.elements["deliver"].value = user.deliver;
             }
         }
         // Добавление пользователя
-        async function CreateUser(userName, userPassword) {
+        async function CreateUser(userName, userPassword, userEmail, userAddress, userGetting, userPayment, userDeliver) {
   
             const response = await fetch("api/users", {
                 method: "POST",
                 headers: { "Accept": "application/json", "Content-Type": "application/json" },
                 body: JSON.stringify({
                     name: userName,
-                    password: userPassword
+                    password: userPassword,
+                    email: userEmail,
+                    address: userAddress,
+                    getting: userGetting,
+                    payment: userPayment,
+                    deliver: userDeliver
                 })
             });
             if (response.ok === true) {
@@ -80,14 +110,19 @@
             }
         }
         // Изменение пользователя
-        async function EditUser(userId, userName, userPassword) {
+        async function EditUser(userId, userName, userPassword, userEmail, userAddress, userGetting, userPayment, userDeliver) {
             const response = await fetch("api/users", {
                 method: "PUT",
                 headers: { "Accept": "application/json", "Content-Type": "application/json" },
                 body: JSON.stringify({
                     id: userId,
                     name: userName,
-                    password: userPassword
+                    password: userPassword,
+                    email: userEmail,
+                    address: userAddress,
+                    getting: userGetting,
+                    payment: userPayment,
+                    deliver: userDeliver
                 })
             });
             if (response.ok === true) {
@@ -174,10 +209,15 @@
             const id = form.elements["id"].value;
             const name = form.elements["name"].value;
             const password = form.elements["password"].value;
+            const email = form.elements["email"].value;
+            const address = form.elements["address"].value;
+            const getting = form.elements["getting"].value;
+            const payment = form.elements["payment"].value;
+            const deliver = form.elements["deliver"].value;
             if (id == 0)
-                CreateUser(name, password);
+                CreateUser(name, password, email, address, getting, payment, deliver);
             else
-                EditUser(id, name, password);
+                EditUser(id, name, password, email, address, getting, payment, deliver);
         });
   
         // загрузка пользователей

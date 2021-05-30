@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="stylus/index.styl"/>
+  <link rel="stylesheet" href="/assets/css/index.css"/>
 	<link rel="icon" href="images/favicon.png" type="image/x-icon">
 	<title>Личный кабинет</title>
 </head>
@@ -12,7 +12,7 @@
 <body class="cabinet__back">
 
   <div class="arrow">
-    <a href="main.html">Главная</a>
+    <a href="/main">Главная</a>
     <i class="fa fa-angle-right" aria-hidden="true"></i>
     <p>Личный кабинет</p>
   </div>
@@ -32,24 +32,23 @@
       <div class="cabinet__profile-blocks">
         <h3>Личные данные</h3>
         <div class="profile__wideblock">
-          <p>имя и фамилия</p>
-          <input type="text">
+          <p>логин</p>
+          <span>{{name}}</span>
         </div>
         <div class="profile__contacts">
           <div class="profile__block">
-            <p>контактный телефон</p>
-            <input type="text">
+            <p>пароль</p>
+            <span>{{password}}</span>
           </div>
           <div class="profile__block">
             <p>электронная почта</p>
-            <input type="text">
+            <span>{{email}}</span>
           </div>
         </div>
         <div class="profile__wideblock">
           <p>Адрес проживания</p>
-          <input type="text">
+          <span>{{address}}</span>
         </div>
-        <button class="cabinet__save" onclick="cabinet_save()">Сохранить изменения</button>
       </div>
     </div>
 
@@ -59,33 +58,26 @@
         <div class="orders__getting">
           <div class="orders__block">
             <p>предпочтительный способ получения</p>
-            <select name="select" class="orders__select">
-              <option value="select1" class="select__style">Доставкой на почту</option>
-              <option value="select2">Курьером</option>
-            </select>
+            <span>{{getting}}</span>
           </div>
           <div class="orders__block">
             <p>предпочтительный способ оплаты</p>
-            <select name="select" class="orders__select">
-              <option value="select1" class="select__style">Картой</option>
-              <option value="select2">Наличными</option>
-            </select>
+			      <span>{{payment}}</span>
           </div>
         </div>
         <div class="orders__wideblock">
           <p>адрес доставки</p>
-          <input type="text">
+          <span>{{deliver}}</span>
         </div>
-        <button class="cabinet__save" onclick="cabinet_save()">Сохранить изменения</button>
       </div>
     </div>
 
   </div>
 
-	<script src="script/index.js"></script>
-	<script src="../build/assets/js/jquery.min.js"></script>
-	<script src="../build/assets/js/fslightbox.js"></script>
-  <script src="../build/assets/js/cabinet.js"></script>
+	<script src="assets/js/index.js"></script>
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/fslightbox.js"></script>
+  <script src="assets/js/cabinet.js"></script>
 	
 </body>
 

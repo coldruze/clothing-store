@@ -71,11 +71,9 @@ show_teammate1.addEventListener("click", function(e){
 		info_teammate2.style.display = 'none'
 		info_teammate3.style.display = 'none'
 		show_teammate1.classList.remove("teammate__btn1")
-		show_teammate1.classList.add("teammate__btn1--active")
 	}
     else {
 		info_teammate1.style.display = 'none'
-		show_teammate1.classList.remove("teammate__btn1--active")
 		show_teammate1.classList.add("teammate__btn1")
 	}
 });
@@ -86,11 +84,9 @@ show_teammate2.addEventListener("click", function(){
 		info_teammate2.style.display = 'block'
 		info_teammate3.style.display = 'none'
 		show_teammate2.classList.remove("teammate__btn2")
-		show_teammate2.classList.add("teammate__btn2--active")
 	}
     else {
 		info_teammate2.style.display = 'none'
-		show_teammate2.classList.remove("teammate__btn2--active")
 		show_teammate2.classList.add("teammate__btn2")
 	}
 });
@@ -101,11 +97,9 @@ show_teammate3.addEventListener("click", function(){
 		info_teammate2.style.display = 'none'
 		info_teammate3.style.display = 'block'
 		show_teammate3.classList.remove("teammate__btn3")
-		show_teammate3.classList.add("teammate__btn3--active")
 	}
     else {
 		info_teammate3.style.display = 'none'
-		show_teammate3.classList.remove("teammate__btn3--active")
 		show_teammate3.classList.add("teammate__btn3")
 	}
 });

@@ -34,6 +34,7 @@
     "express-session": "^1.17.1",
     "fslightbox": "^3.2.3",
     "handlebars": "^4.7.7",
+    "lighthouse": "^8.0.0",
     "mongodb": "^3.6.6",
     "mssql": "^7.0.0",
     "xml": "^1.0.1"

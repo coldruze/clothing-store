@@ -3,7 +3,6 @@ const MongoClient = require("mongodb").MongoClient;
 const objectId = require("mongodb").ObjectID;
 const bodyParser = require("body-parser");
 const hbs = require("express-handlebars");
-// const hbs = require("hbs")
 const app = express();
 const jsonParser = express.json();
  
@@ -36,7 +35,7 @@ mongoClient.connect(function(err, client){
 app.use('/assets', express.static('build/assets'));
 
 app.get("/", function (request, response) {
-    response.render("main.hbs");
+    response.render("auth.hbs");
 });
 
 app.get("/auth", function (request, response) {
@@ -47,19 +46,15 @@ app.get("/main", function (request, response) {
     response.render("main.hbs");
 });
 
-app.get("/clothes1", function (request, response) {
+app.get("/men", function (request, response) {
     response.render("clothes1.hbs");
 });
 
-app.get("/clothes2", function (request, response) {
+app.get("/women", function (request, response) {
     response.render("clothes2.hbs");
 });
 
-app.get("/clothes3", function (request, response) {
-    response.render("clothes3.hbs");
-});
-
-app.get("/clothes3", function (request, response) {
+app.get("/baby", function (request, response) {
     response.render("clothes3.hbs");
 });
 
@@ -71,22 +66,16 @@ app.get("/about", function (request, response) {
     response.render("about.hbs");
 });
 
-app.get("/index", function (request, response) {
-    response.render("index.hbs");
+app.get("/admin", function (request, response) {
+    response.render("admin.hbs");
 });
 
 
 app.post("/auth", urlencodedParser, function (request, response) {
     if(!request.body) return response.sendStatus(400);
-    // console.log("Поступила информация");
-    // console.log(request.body);
-    // response.send(`${request.body.userName} - ${request.body.userAge}`);
     const db = mongoClient.db("usersdb");
     const collection = db.collection("users");
     collection.findOne({name: request.body.userName, password: request.body.userPassword}, function(err, results){
-        // console.log("Ура!");
-        // console.log(request.body.userName); 
-        console.log("Результаты: " + results); 
         if(results != null){
             response.render(__dirname+"/build/cabinet.hbs", {
                 name: request.body.userName,
@@ -180,7 +169,6 @@ app.put("/api/users", jsonParser, function(req, res){
     });
 });
 
-// прослушиваем прерывание работы программы (ctrl-c)
 process.on("SIGINT", () => {
     dbClient.close();
     process.exit();

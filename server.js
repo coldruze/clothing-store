@@ -46,17 +46,20 @@ app.get("/main", function (request, response) {
     response.render("main.hbs");
 });
 
-app.get("/men", function (request, response) {
-    response.render("clothes1.hbs");
-});
+app.get("/admin-men", function(request, response){
+    response.render("admin-men.hbs", {
+    });
+ });
 
-app.get("/women", function (request, response) {
-    response.render("clothes2.hbs");
-});
+ app.get("/admin-women", function(request, response){
+    response.render("admin-women.hbs", {
+    });
+ });
 
-app.get("/baby", function (request, response) {
-    response.render("clothes3.hbs");
-});
+ app.get("/admin-baby", function(request, response){
+    response.render("admin-baby.hbs", {
+    });
+ });
 
 app.get("/style", function (request, response) {
     response.render("style.hbs");
@@ -173,3 +176,78 @@ process.on("SIGINT", () => {
     dbClient.close();
     process.exit();
 }); 
+
+app.get("/men", function(request, response){
+    const db = mongoClient.db("clothes1DB");
+    const collection = db.collection("clothes1");
+    collection.find({}).toArray(function(err, clothes1){
+		response.render(__dirname+"/src/clothes1.hbs", {
+			clothes: clothes1
+    	});
+    });
+});
+app.post("/admin-men", urlencodedParser, function (request, response) {
+    const userPos = request.body.pos;
+	const userName = request.body.name;
+    const userText = request.body.text;
+
+    const user = {pos: userPos, name: userName, text: userText};
+    const db = mongoClient.db("clothes1DB");
+    const collection = db.collection("clothes1");
+    collection.insertOne(user, function(err, result){
+        if(err) return console.log(err);
+        response.render(__dirname+"/src/admin-men.hbs", {
+        });
+
+    });
+});
+
+app.get("/women", function(request, response){
+    const db = mongoClient.db("clothes2DB");
+    const collection = db.collection("clothes2");
+    collection.find({}).toArray(function(err, clothes2){
+		response.render(__dirname+"/src/clothes2.hbs", {
+            clothes: clothes2
+    	});
+    });
+});
+app.post("/admin-women", urlencodedParser, function (request, response) {
+    const userPos = request.body.pos;
+	const userName = request.body.name;
+    const userText = request.body.text;
+
+    const user = {pos: userPos, name: userName, text: userText};
+    const db = mongoClient.db("clothes2DB");
+    const collection = db.collection("clothes2");
+    collection.insertOne(user, function(err, result){
+        if(err) return console.log(err);
+        response.render(__dirname+"/src/admin-women.hbs", {
+        });
+
+    });
+});
+
+app.get("/baby", function(request, response){
+    const db = mongoClient.db("clothes3DB");
+    const collection = db.collection("clothes3");
+    collection.find({}).toArray(function(err, clothes3){
+		response.render(__dirname+"/src/clothes3.hbs", {
+            clothes: clothes3
+    	});
+    });
+});
+app.post("/admin-baby", urlencodedParser, function (request, response) {
+    const userPos = request.body.pos;
+	const userName = request.body.name;
+    const userText = request.body.text;
+
+    const user = {pos: userPos, name: userName, text: userText};
+    const db = mongoClient.db("clothes3DB");
+    const collection = db.collection("clothes3");
+    collection.insertOne(user, function(err, result){
+        if(err) return console.log(err);
+        response.render(__dirname+"/src/admin-baby.hbs", {
+        });
+
+    });
+});

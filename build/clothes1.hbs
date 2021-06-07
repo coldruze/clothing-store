@@ -49,45 +49,13 @@
   </div>
 
   <div class="clothes__content">
+    {{#each clothes}}
     <div class="clothes__content--primary">
-      <a data-fslightbox href="./assets/images/clothes/clothes1.webp"><img src="./assets/images/clothes/clothes1.webp" alt="Фото"></a>
-      <span>Comme des Garçons</span>
-      <p>кроссовки Air Jordan 1 High из коллаборации с Dior</p>
-      <p>824 814 ₽</p>
+      <img src="./assets/images/clothes/{{this.pos}}.webp" alt="Фото">
+      <span>{{this.name}}</span>
+      <p>{{this.text}}</p>
     </div>
-    <div class="clothes__content--primary">
-      <a data-fslightbox href="./assets/images/clothes/clothes2.webp"><img src="./assets/images/clothes/clothes2.webp" alt="Фото"></a>
-      <span>Sandro Paris</span>
-      <p>кроссовки Air Jordan 1 Mid из коллаборации с Dior</p>
-      <p>14 107 ₽</p>
-    </div>
-    <div class="clothes__content--primary">
-      <a data-fslightbox href="./assets/images/clothes/clothes3.webp"><img src="./assets/images/clothes/clothes3.webp" alt="Фото"></a>
-      <span>Kenzo</span>
-      <p>кроссовки Air Jordan 1 Retro High 'Volt Gold'</p>
-      <p>19 346 ₽</p>
-    </div>
-  </div>
-
-  <div class="clothes__content">
-    <div class="clothes__content--primary">
-      <a data-fslightbox href="./assets/images/clothes/clothes1.webp"><img src="./assets/images/clothes/clothes1.webp" alt="Фото"></a>
-      <span>Comme des Garçons</span>
-      <p>кроссовки Air Jordan 1 High из коллаборации с Dior</p>
-      <p>824 814 ₽</p>
-    </div>
-    <div class="clothes__content--primary">
-      <a data-fslightbox href="./assets/images/clothes/clothes2.webp"><img src="./assets/images/clothes/clothes2.webp" alt="Фото"></a>
-      <span>Sandro Paris</span>
-      <p>кроссовки Air Jordan 1 Mid из коллаборации с Dior</p>
-      <p>14 107 ₽</p>
-    </div>
-    <div class="clothes__content--primary">
-      <a data-fslightbox href="./assets/images/clothes/clothes3.webp"><img src="./assets/images/clothes/clothes3.webp" alt="Фото"></a>
-      <span>Kenzo</span>
-      <p>кроссовки Air Jordan 1 Retro High 'Volt Gold'</p>
-      <p>19 346 ₽</p>
-    </div>
+    {{/each}}
   </div>
 
   <div class="footer">
@@ -117,9 +85,8 @@
 	</div>
 
 	<script src="./assets/js/index.js"></script>
-	<script src="./assets/js/jquery.min.js"></script>
-	<script src="./assets/js/m-menu.js"></script>
-  <script src="./assets/js/fslightbox.js"></script>
+	<script src="script/jquery.min.js"></script>
+	<script src="script/m-menu.js"></script>
 
 </body>
 
